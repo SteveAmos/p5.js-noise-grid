@@ -19,15 +19,14 @@ function createGrid(numRows, numCols) {
   
   // define a gradient of colors to use with Perlin noise
   let colors = [
+    color(255, 128, 0),
     color(255, 0, 0),
     color(255, 255, 0),
+    //color(200, 255, 0),
     color(0, 255, 0),
     color(0, 255, 255),
     color(0, 0, 255),
-    color(255, 0, 255),
-    //color(128, 128, 128),
-    color(255, 128, 0),
-    //color(0, 128, 255)
+    color(255, 0, 255)
   ];
    
   // nested for loop to create cells
@@ -46,6 +45,7 @@ function createGrid(numRows, numCols) {
       
       // set fill color for this cell
       fill(cellColor);
+      noStroke();
       
       // draw cell
       rect(x, y, cellWidth, cellHeight);
